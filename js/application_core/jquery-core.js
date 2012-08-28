@@ -13,7 +13,7 @@
             define: function(id, constructor) {
                 if (app.utils.typeEqual(id, 'string')
                     && app.utils.typeEqual(constructor, 'function')) {
-                    temp = constructor(app.f.define(this, id));
+                    var temp = constructor(app.f.define(this, id));
                     if (temp.init && app.utils.typeEqual(temp.init, 'function') && temp.destroy
                         && app.utils.typeEqual(temp.destroy, 'function')) {
                         temp = null;
